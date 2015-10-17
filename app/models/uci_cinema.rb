@@ -1,0 +1,2 @@
+class UciCinema < Cinema
+end

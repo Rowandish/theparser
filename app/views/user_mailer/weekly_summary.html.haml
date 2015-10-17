@@ -1,0 +1,27 @@
+- Cinema.all.each do |cinema|
+  %h3
+    Nome:
+    = cinema.name
+  %h6
+    Indirizzo:
+    = cinema.address
+  %h6
+    Pagina web di riferimento:
+    = cinema.webpage
+  %h6
+    Nome promozione:
+    = cinema.promotion_name
+  %h6
+    Descrizione_promozione:
+    = cinema.promotion_desc
+  %h3 Elenco dei film in promozione:
+  - cinema.films.each do |film|
+    %h6
+      Nome:
+      = film.name
+    %h6
+      Data:
+      = film.date
+
+
+
