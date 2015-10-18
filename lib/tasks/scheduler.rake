@@ -6,3 +6,9 @@ task weekly_summary: :environment do
   end
   puts 'done.'
 end
+
+task update_promotion_movies: :environment do
+  puts 'Updating movies...'
+  Cinema.parse
+  puts 'done.'
+end
