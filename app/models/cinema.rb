@@ -11,5 +11,6 @@ class Cinema < ActiveRecord::Base
   def self.parse
     # subclasses.each { |subclass| subclass.first.parse }
     UciCinema.first.parse
+    Cinema.all.each(&:parse)
   end
 end
