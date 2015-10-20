@@ -3,5 +3,5 @@
     = image_tag(film.image)
   .title= film.name
   (
-  = film.date
+  = film.date.strftime("%d %B %Y")
   )

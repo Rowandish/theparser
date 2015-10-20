@@ -5,12 +5,10 @@ class RivoliCinema < Cinema
     doc = Nokogiri::HTML(open(webpage))
     doc.css('body > div').each do |film|
       children = film.children
-      if film_on_thursday?(children)
-        Film.create(name: children.css('.titoloFilm')[0].content,
-                    date: get_thursday_date(children).to_s, #TODO: refactoring con campo DateTime e non string!!!
-                    image: children.css('.locandina_b')[0]['src'],
-                    cinema: self)
-      end
+      Film.create(name: children.css('.titoloFilm')[0].content,
+                  date: get_thursday_date(children),
+                  image: children.css('.locandina_b')[0]['src'],
+                  cinema: self) if film_on_thursday?(children)
     end
   end
 
@@ -42,28 +40,5 @@ class RivoliCinema < Cinema
   # Data una string del tipo 19 Oct 2015 - 22:30 la converte in Mon, 19 Oct 2015 22:30:00 +0000
   def convert_to_date(date)
     DateTime.strptime(convert_month_from_ita_to_eng(date), '%d %b %Y - %H:%M')
-  end
-
-  # Data una string del tipo 19 Ott 2015 - 22:30 la converte in 19 Oct 2015 - 22:30
-  def convert_month_from_ita_to_eng(date)
-    english_to_italian =
-    {
-      'Jan' => 'Gen',
-      'Feb' => 'Feb',
-      'Mar' => 'Mar',
-      'Apr' => 'Apr',
-      'May' => 'Mag',
-      'Jun' => 'Giu',
-      'Jul' => 'Lug',
-      'Aug' => 'Ago',
-      'Sep' => 'Set',
-      'Oct' => 'Ott',
-      'Nov' => 'Nov',
-      'Dec' => 'Dic'
-    }
-    english_to_italian.each do |en, it|
-      date.gsub!(/\b#{it}\b/i, en)
-    end
-    date
   end
 end

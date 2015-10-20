@@ -8,7 +8,17 @@ task weekly_summary: :environment do
 end
 
 task update_promotion_movies: :environment do
-  puts 'Updating movies...'
-  Cinema.parse
-  puts 'done.'
+  puts 'Updating movies for UciCinema'
+  UciCinema.find(1).parse
+  puts 'Updating movies for Cinema Rivoli'
+  RivoliCinema.find(2).parse
+  puts 'Updating movies for Cinema Fiume'
+  FiumeCinema.find(3).parse
+  puts 'Updating movies for Cinema Kappadue'
+  FiumeCinema.find(4).parse
+  puts 'Updating movies for Cinema Diamante'
+  FiumeCinema.find(5).parse
+  puts 'Updating movies for Cinema Pindemonte'
+  FiumeCinema.find(6).parse
+  puts 'Done'
 end

@@ -10,14 +10,20 @@ class UciCinema < Cinema
     end
     stack.each do |node|
       Film.create(name: node.css('.titolo')[0].content,
-                  date: node.css('.data')[0].content,
-                  image: node.css('img')[0]['src'], cinema: self) if every_content_valorized? node
+                  date: get_date_from_string(node.css('.data')[0].content),
+                  image: node.css('img')[0]['src'], cinema: self)
     end
   end
 
   private
 
-  def every_content_valorized?(node)
-    node.css('.titolo').is_a?(Array) && node.css('.data').is_a?(Array) && node.css('.img').is_a?(Array)
+  # Da "Martedi' 27 Ottobre" alla data corrispondente
+  def get_date_from_string(date)
+    Date.parse(exctract_day_and_month_from_date(convert_month_from_ita_to_eng(date)))
+  end
+
+  # Da "Martedi' 27 Ottobre" a "27 Ott"
+  def exctract_day_and_month_from_date(date)
+    date.match(/[0-9]{2} [a-zA-Z]{3}/).to_s
   end
 end
