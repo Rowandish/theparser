@@ -1,14 +1,15 @@
-.cinema
-  .name= cinema.name
-  .address
-    = cinema.address
-    (
-    = cinema.webpage
-    )
-  .promotion
-    Promozione:
-    = cinema.promotion_name
-    (
-    = cinema.promotion_desc
-    )
-  .films= render cinema.films
+- unless cinema.films.empty?
+  .cinema
+    .name= cinema.name
+    .address
+      = cinema.address
+      (
+      = cinema.webpage
+      )
+    .promotion
+      Promozione:
+      = cinema.promotion_name
+      (
+      = cinema.promotion_desc
+      )
+    .films= render cinema.films
