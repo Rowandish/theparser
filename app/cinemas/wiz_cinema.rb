@@ -1,4 +1,4 @@
-class UciCinema < CinemaParser
+class WizCinema < CinemaParser
   def initialize
     super 'Multisala Wiz'
   end
