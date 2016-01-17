@@ -1,5 +1,5 @@
 # Classe statica che gestisce tutto quello che riguarda le date
-class DateHelper
+module DateHelper
   # Da "Martedi' 27 Ottobre" alla data corrispondente
   def self.get_date_from_string(date)
     Date.parse(exctract_day_and_month_from_date(convert_month_from_ita_to_eng(date)))
