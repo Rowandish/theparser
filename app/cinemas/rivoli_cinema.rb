@@ -1,12 +1,10 @@
 # RivoliCinema, problema: la promozione 2x1 vale solo di giovedì e l'html non ha alcuna indicazione sulla natura della data
 class RivoliCinema < CinemaParser
   def initialize
-    @cinema = Cinema.where(name: 'Multisala Rivoli').first
-    super
+    super 'Multisala Rivoli'
   end
 
   def parse
-    super
     @doc.css('body > div').each do |film|
       children = film.children
       Film.create(name: children.css('.titoloFilm')[0].content,

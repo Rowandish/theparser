@@ -5,4 +5,7 @@ class Cinema < ActiveRecord::Base
   validates :webpage, uniqueness: true
   default_scope { where(enabled: true) }
 
+  def delete_films
+    films.each(&:destroy)
+  end
 end

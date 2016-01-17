@@ -13,3 +13,5 @@
 /tmp
 .env
 ./idea
+*.sublime-project
+*.sublime-workspace

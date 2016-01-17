@@ -1,7 +1,6 @@
 class UciCinema < CinemaParser
   def initialize
-    @cinema = Cinema.where(name: 'UCI Cinemas Verona').first
-    super
+    super 'UCI Cinemas Verona'
   end
 
   def parse

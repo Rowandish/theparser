@@ -1,6 +1,5 @@
 class PindemonteCinema < FiumeCinemas
   def initialize
-    @cinema = Cinema.where(name: 'Cinema Pindemonte').first
-    super
+    super 'Cinema Pindemonte'
   end
 end
