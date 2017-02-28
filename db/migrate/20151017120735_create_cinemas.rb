@@ -11,6 +11,5 @@ class CreateCinemas < ActiveRecord::Migration
       t.timestamps null: false
     end
     add_index :cinemas, :name, unique: true
-    add_index :cinemas, :webpage, unique: true
   end
 end

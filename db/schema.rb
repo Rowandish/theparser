@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20151018153651) do
   end
 
   add_index "cinemas", ["name"], name: "index_cinemas_on_name", unique: true, using: :btree
-  add_index "cinemas", ["webpage"], name: "index_cinemas_on_webpage", unique: true, using: :btree
 
   create_table "films", force: :cascade do |t|
     t.string   "name"

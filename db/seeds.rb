@@ -1,6 +1,7 @@
 User.create(name: 'Paolo', email: 'paolo.guglielmini.vr@gmail.com')
 User.create(name: 'Pollet', email: 'flavia.veronese901@gmail.com')
 User.create(name: 'Alberto', email: 'paoloalbert@alice.it')
+User.create(name: 'Franz', email: 'francesco.percassi.bg@gmail.com')
 Cinema.create(name: 'UCI Cinemas Verona', address: 'Via Monte Amiata, 37057 San Giovanni Lupatoto VR', webpage: 'http://www.ucicinemas.it/generic/rassegne.php', promotion_name: 'Ricomincio da tre', promotion_desc: 'Tutti i martedì film a 3 euro', enabled: true)
 Cinema.create(name: 'Multisala Rivoli', address: 'Piazza Brà, 10, 37121 Verona VR', webpage: 'http://www.multisalarivoli.it/film/index_settdata.php?idcinema=1491&visual=b', promotion_name: '2x1 Facebook', promotion_desc: 'Stampando la promo facebook il giovedì entrano due al prezzo di uno', enabled: true)
 Cinema.create(name: 'Cinema Fiume', address: 'Vicolo Cere, 14', webpage: 'http://www.cinemafiume.it/cinema-fiume', promotion_name: 'Mercoledì ingresso 4.5€', promotion_desc: 'Il mercoledì ingresso scontato a 4.5 euro', enabled: true)
@@ -9,3 +10,4 @@ Cinema.create(name: 'Cinema Diamante', address: 'Via Pietro Zecchinato, 5, 37136
 Cinema.create(name: 'Cinema Pindemonte', address: 'Via Sabotino, 2/b, 37124 Verona VR', webpage: 'http://www.cinemafiume.it/cinema-pindemonte', promotion_name: 'Mercoledì ingresso 4.5€', promotion_desc: 'Il mercoledì ingresso scontato a 4.5 euro', enabled: true)
 Cinema.create(name: 'Cinema Nuovo Eden', address: 'Via Nino Bixio, 9, 25122 Brescia BS', webpage: 'http://www.nuovoeden.it/programmazione.asp', promotion_name: 'Ingresso 5€', promotion_desc: 'Cinema d\'autore', enabled: true)
 Cinema.create(name: 'Multisala Wiz', address: 'Freccia Rossa - Shopping Centre S.R.L., Viale Italia, 31, 25126 Brescia BS', webpage: 'http://www.ilregnodelcinema.com/generic/rassegne.php', promotion_name: 'Rivediamoli - 4€', promotion_desc: 'Il lunedì al frecciarossa film passati a 4€', enabled: true)
+Cinema.create(name: 'Multisala Oz', address: 'Via Sorbanella, 12, 25125 Brescia BS', webpage: 'http://www.ilregnodelcinema.com/generic/rassegne.php', promotion_name: 'Rivediamoli - 4€', promotion_desc: 'Il lunedì al OZ film passati a 4€', enabled: true)

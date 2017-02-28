@@ -24,5 +24,7 @@ task update_promotion_movies: :environment do
   NuovoEdenCinema.new.parse
   puts 'Updating movies for Cinema Wiz Cinema'
   WizCinema.new.parse
+  puts 'Updating movies for Cinema Oz Cinema'
+  OzCinema.new.parse
   puts 'Done'
 end
